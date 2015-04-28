@@ -8,14 +8,17 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   <regionBase>
   	
     <region id="mainDevice" width="100%" height="100%">
-    	<region id="rText" left="60%" top="10%" width="16.5%" height="40%" zIndex="0"/>
+    	<region id="rText1" left="60%" top="10%" width="16.5%" height="40%" zIndex="0"/>
+    	<region id="rText2" left="60%" top="30%" width="16.5%" height="40%" zIndex="0"/>
+    	<region id="rText3" left="60%" top="60%" width="16.5%" height="40%" zIndex="0"/>
     	<region id="rVideo"  width="100%" height="100%" zIndex ="0" />
       <region id="rMainMenu" left="0%" top="0%" width="16.5%" height="100%" zIndex="7">
-      	   <region id="rB1" left="3%" top="20%" width="94%" height="10%" zIndex="7"/>
+      	  <region id="rB1" left="3%" top="20%" width="94%" height="10%" zIndex="7"/>
 	      <region id="rB2" left="3%" top="35%" width="94%" height="10%" zIndex="7"/>
 	      <region id="rB3" left="3%" top="50%" width="94%" height="10%" zIndex="7"/>
 	      <region id="rB4" left="3%" top="1%" width="35%" height="10%" zIndex="0"/>
 	      <region id="rB5" left="0%" top="0%" width="0%" height="0%" zIndex="0"/>
+	      <region id="rB6" left="3%" top="70%" width="94%" height="10%" zIndex="7"/>
 	      <region id="rT1" left="6%" top="4%" width="94%" height="40%" zIndex="7"/> 
       </region>
       <region id="rrightColMenu" left="83.5%" top="0" width="16.5%" height="100%" zIndex="7">
@@ -25,19 +28,30 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
             <region id="rgOpcao4" left="3%" top="64.5%" width="94%" height="10%"/>
             <region id="rgOpcao5" left="3%" top="80%" width="94%" height="10%"/>
       </region>
+      <region id="rNewScreen" width="100%" height="100%">
+      		<region id="rVideo2"  width="40%" height="40%" left="0%" top="0%" zIndex ="0" />
+      		<region id="rText4"  left="30%" height="40%"  top="60%" width="19%" zIndex ="0"/>
+      		
+      </region>
+      	
     </region>
   </regionBase>
 
   <descriptorBase>
-  	
+  	<descriptor id="dNewScreen" region="rNewScreen"/>
   	<descriptor id="dVideo" region="rVideo"/>
-  	<descriptor id="dText" region="rText"/>  	
+  	<descriptor id="dText1" region="rText1"/> 
+  	<descriptor id="dText2" region="rText2"/> 
+  	<descriptor id="dText3" region="rText3"/>
+  	<descriptor id="dVideo2" region="rVideo2"/>
+  	<descriptor id="dText4" region="rText4"/>   	
     <descriptor id="dLateralBar" 	region="rMainMenu"/>
 	<descriptor id="dBtStartMenu" 	region="rB4"/>
 	<descriptor id="dBtStopApp" 	region="rB5"/>
     <descriptor id="dBtDisease" 	region="rB1" focusIndex="ixBtDisease" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtCondition" moveRight="1" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
     <descriptor id="dBtCondition" 	region="rB2" focusIndex="ixBtCondition" focusBorderWidth="0" moveUp="ixBtDisease" moveDown="ixBtService" moveRight="1" focusSrc="img/btnconditionfocus.png" focusSelSrc="img/btnconditionselect.png"/>
-    <descriptor id="dBtService" 	region="rB3" focusIndex="ixBtService" focusBorderWidth="0"	moveUp="ixBtCondition" moveDown="ixBtDisease" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnserviceselect.png"/>
+    <descriptor id="dBtService" 	region="rB3" focusIndex="ixBtService" focusBorderWidth="0"	moveUp="ixBtCondition" moveDown="ixBtNewScreen" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnserviceselect.png"/>
+   <descriptor id="dBtNewScreen" 	region="rB6" focusIndex="ixBtNewScreen" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtDisease" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnserviceselect.png"/>
     <descriptor id="dT1" region="rT1" focusIndex="ixT1" moveRight="ixB4">
 		<descriptorParam name="background" value="black"/>
         <descriptorParam name="fontSize" value="28"/>
@@ -119,13 +133,17 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   <media descriptor="dVideo" id="video" src="media/corrego1.mp4">
   	<area id="a2" begin="5s"/>
   </media>
-  <media descriptor="dLateralBar" id="menulateralbar" src="img/patternmenubar.png"/>
   
+  <media descriptor="dVideo2" id="video2" src="media/corrego1.mp4"/> 
+   
+  <media descriptor="dText4" id="Text4" src="txt/text2.txt"/>
+  <media descriptor="dLateralBar" id="menulateralbar" src="img/patternmenubar.png"/>
   <media descriptor="dBtStopApp" id="btnstopapp" src="img/startmenu.png"/>
   <media descriptor="dBtStartMenu" id="btnstartmenu" src="img/startmenu.png"/>
   <media descriptor="dBtDisease" id="btndisease" src="img/btndisease.png"/>
   <media descriptor="dBtCondition" id="btncondition" src="img/btncondition.png"/>
   <media descriptor="dBtService" id="btnservice" src="img/btnservice.png"/>
+  <media descriptor="dBtNewScreen" id="btNewScreen" src="img/btndisease.png"/>
   <media descriptor="dT1" id="t1" src="txt/text1.txt">
     <property name="fontUri"/>
     <property name="fontColor"/>
@@ -145,7 +163,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 	  <media id="opcao13" src="img/btndisease.png" descriptor="dOpcao13"/>
 	  <media id="opcao14" src="img/btndisease.png" descriptor="dOpcao14"/>
 	  <media id="opcao15" src="img/btndisease.png" descriptor="dOpcao15"/>
-	  <media id="Text"  src="txt/text2.txt" descriptor="dText"/>
+	  <media id="Text"  src="txt/text2.txt" descriptor="dText1"/>
 	  
 	<link id="ShowText11" xconnector="onSelectionStart">
   		<bind component="opcao11" role="onSelection"/>
@@ -187,9 +205,37 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 	  <media id="opcao23" src="img/btncondition.png" descriptor="dOpcao23"/>
 	  <media id="opcao24" src="img/btncondition.png" descriptor="dOpcao24"/>
 	  <media id="opcao25" src="img/btncondition.png" descriptor="dOpcao25"/>
+	   <media id="Text2"  src="txt/text2.txt" descriptor="dText2"/>
+	  
+	<link id="ShowText21" xconnector="onSelectionStart">
+  		<bind component="opcao21" role="onSelection"/>
+  		<bind component="Text2" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText22" xconnector="onSelectionStart">
+  		<bind component="opcao22" role="onSelection"/>
+  		<bind component="Text2" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText23" xconnector="onSelectionStart">
+  		<bind component="opcao23" role="onSelection"/>
+  		<bind component="Text2" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText24" xconnector="onSelectionStart">
+  		<bind component="opcao24" role="onSelection"/>
+  		<bind component="Text2" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText25" xconnector="onSelectionStart">
+  		<bind component="opcao25" role="onSelection"/>
+  		<bind component="Text2" role="start"/>
+  	</link>
+  	
   </context>
   
   <context id="cMenu3">
+
 	   <port id="pMenu30" component="fundoMenu3"/>
 	   <port id="pMenu31" component="opcao31"/>
 	   <port id="pMenu32" component="opcao32"/>
@@ -202,7 +248,37 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 	  <media id="opcao33" src="img/btnservice.png" descriptor="dOpcao33"/>
 	  <media id="opcao34" src="img/btnservice.png" descriptor="dOpcao34"/>
 	  <media id="opcao35" src="img/btnservice.png" descriptor="dOpcao35"/>
+	   <media id="Text3"  src="txt/text2.txt" descriptor="dText3"/>
+	  
+	<link id="ShowText31" xconnector="onSelectionStart">
+  		<bind component="opcao31" role="onSelection"/>
+  		<bind component="Text3" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText32" xconnector="onSelectionStart">
+  		<bind component="opcao32" role="onSelection"/>
+  		<bind component="Text3" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText33" xconnector="onSelectionStart">
+  		<bind component="opcao33" role="onSelection"/>
+  		<bind component="Text3" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText34" xconnector="onSelectionStart">
+  		<bind component="opcao34" role="onSelection"/>
+  		<bind component="Text3" role="start"/>
+  	</link>
+  	
+  	<link id="ShowText35" xconnector="onSelectionStart">
+  		<bind component="opcao35" role="onSelection"/>
+  		<bind component="Text3" role="start"/>
+  	</link>
+  	
+	  
   </context>
+
+
 <link id="lB9" xconnector="onBeginStart">
    <bind component="video" interface="a2" role="onBegin" />
    <bind component="btnstartmenu" role="start" />
@@ -218,6 +294,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     <bind component="btncondition" role="start"/>
     <bind component="btnservice" role="start"/>
     <bind component="btnstopapp" role="start"/>
+    <bind component="btNewScreen" role="start"/>
     <bind component="t1" role="start"/>
   </link>
 
@@ -231,6 +308,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     <bind component="btndisease" role="stop"/>
     <bind component="btncondition" role="stop"/>
     <bind component="btnservice" role="stop"/>
+    <bind component="btNewScreen" role="stop"/>
     <bind component="t1" role="stop"/>
     <bind component="cMenu1" role="stop"/>
     <bind component="cMenu2" role="stop"/>
@@ -256,11 +334,29 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   
   <link id="linkSelectMenuItemService" xconnector="onSelectionStartStop">
   	<bind component="btnservice" role="onSelection"/>
+  	
   	<bind component="cMenu2" role="stop"/>
     <bind component="cMenu1" role="stop"/>
     <bind component="cMenu3" role="start"/>
   </link>
-  	
+  
+  <link id="linkSelectMenuItemNewScreen" xconnector="onSelectionStartStop">
+  	<bind component="btNewScreen" role="onSelection"/>
+  	<bind component="btNewScreen" role="stop"/>
+  	<bind component="menulateralbar" role="stop"/>
+    <bind component="btndisease" role="stop"/>
+    <bind component="btncondition" role="stop"/>
+    <bind component="btnservice" role="stop"/>
+    <bind component="btNewScreen" role="stop"/>
+    <bind component="t1" role="stop"/>
+    <bind component="cMenu1" role="stop"/>
+    <bind component="cMenu2" role="stop"/>
+    <bind component="cMenu3" role="stop"/>
+    <bind component="video" role="stop"/>
+    <bind component="video2" role="start"/>
+    
+    <bind component="Text4" role="start"/>
+  </link>
 
 </body>
 </ncl>
