@@ -13,9 +13,9 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     	<region id="rText3" left="60%" top="60%" width="16.5%" height="40%" zIndex="0"/>
     	<region id="rVideo"  width="100%" height="100%" zIndex ="0" />
       <region id="rMainMenu" left="0%" top="0%" width="16.5%" height="100%" zIndex="7">
-      	  <region id="rB1" left="3%" top="20%" width="94%" height="10%" zIndex="7"/>
-	      <region id="rB2" left="3%" top="35%" width="94%" height="10%" zIndex="7"/>
-	      <region id="rB3" left="3%" top="50%" width="94%" height="10%" zIndex="7"/>
+      	  <region id="rB1" left="3%" top="20%" width="70%" height="10%" zIndex="7"/>
+	      <region id="rB2" left="3%" top="35%" width="70%" height="10%" zIndex="7"/>
+	      <region id="rB3" left="3%" top="50%" width="70%" height="10%" zIndex="7"/>
 	      <region id="rB4" left="3%" top="1%" width="35%" height="10%" zIndex="0"/>
 	      <region id="rB5" left="0%" top="0%" width="0%" height="0%" zIndex="0"/>
 	      <region id="rB6" left="3%" top="70%" width="94%" height="10%" zIndex="7"/>
@@ -30,7 +30,8 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
       </region>
       <region id="rNewScreen" width="100%" height="100%">
       		<region id="rVideo2"  width="40%" height="40%" left="0%" top="0%" zIndex ="0" />
-      		<region id="rText4"  left="30%" height="40%"  top="60%" width="19%" zIndex ="0"/>
+      		<region id="rText4"  left="60%" height="40%"  top="60%" width="19%" zIndex ="0"/>
+      		<region id="rBackMainMenu" left="3%" top="70%" width="20%" height="15%" zIndex="0"/>
       		
       </region>
       	
@@ -39,6 +40,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 
   <descriptorBase>
   	<descriptor id="dNewScreen" region="rNewScreen"/>
+  	<descriptor id="dBackMainMenu" region="rBackMainMenu" focusIndex="ixBtnBackMainMenu" />
   	<descriptor id="dVideo" region="rVideo"/>
   	<descriptor id="dText1" region="rText1"/> 
   	<descriptor id="dText2" region="rText2"/> 
@@ -135,7 +137,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   </media>
   
   <media descriptor="dVideo2" id="video2" src="media/corrego1.mp4"/> 
-   
+  <media descriptor="dBackMainMenu" id="BackMainMenu" src="img/btndiabetes.png"/>
   <media descriptor="dText4" id="Text4" src="txt/text2.txt"/>
   <media descriptor="dLateralBar" id="menulateralbar" src="img/patternmenubar.png"/>
   <media descriptor="dBtStopApp" id="btnstopapp" src="img/startmenu.png"/>
@@ -354,9 +356,28 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     <bind component="cMenu3" role="stop"/>
     <bind component="video" role="stop"/>
     <bind component="video2" role="start"/>
-    
+    <bind component="BackMainMenu" role="start"/>
     <bind component="Text4" role="start"/>
   </link>
+  
+  <link id="linkSelectBackMainMenu" xconnector="onSelectionStartStop">
+  	<bind component="BackMainMenu" role="onSelection"/>
+  	<bind component="BackMainMenu" role="stop"/>
+	<bind component="video2" role="stop"/>
+    <bind component="Text4" role="stop"/>
+    <bind component="btNewScreen" role="start"/>
+  	<bind component="menulateralbar" role="start"/>
+    <bind component="btndisease" role="start"/>
+    <bind component="btncondition" role="start"/>
+    <bind component="btnservice" role="start"/>
+    <bind component="btNewScreen" role="start"/>
+    <bind component="t1" role="start"/>
+    <bind component="cMenu1" role="start"/>
+    <bind component="cMenu2" role="start"/>
+    <bind component="cMenu3" role="start"/>
+    <bind component="video" role="start"/>
+  </link>
+  	
 
 </body>
 </ncl>
