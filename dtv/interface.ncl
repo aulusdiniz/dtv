@@ -31,8 +31,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
       <region id="rNewScreen" width="100%" height="100%">
       		<region id="rVideo2"  width="40%" height="40%" left="0%" top="0%" zIndex ="0" />
       		<region id="rText4"  left="60%" height="40%"  top="60%" width="19%" zIndex ="0"/>
-      		<region id="rBackMainMenu" left="3%" top="70%" width="20%" height="15%" zIndex="0"/>
-      		
+      		<region id="rBackMainMenu" left="3%" top="80%" width="15%" height="15%" zIndex="0"/>
       </region>
       	
     </region>
@@ -363,18 +362,14 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   <link id="linkSelectBackMainMenu" xconnector="onSelectionStartStop">
   	<bind component="BackMainMenu" role="onSelection"/>
   	<bind component="BackMainMenu" role="stop"/>
-	<bind component="video2" role="stop"/>
+	<!-- <bind component="video2" role="stop"/> -->
     <bind component="Text4" role="stop"/>
     <bind component="btNewScreen" role="start"/>
   	<bind component="menulateralbar" role="start"/>
     <bind component="btndisease" role="start"/>
     <bind component="btncondition" role="start"/>
     <bind component="btnservice" role="start"/>
-    <bind component="btNewScreen" role="start"/>
     <bind component="t1" role="start"/>
-    <bind component="cMenu1" role="start"/>
-    <bind component="cMenu2" role="start"/>
-    <bind component="cMenu3" role="start"/>
     <bind component="video" role="start"/>
   </link>
   	
