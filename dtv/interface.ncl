@@ -19,7 +19,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 	      <region id="rB4" left="3%" top="1%" width="35%" height="10%" zIndex="0"/>
 	      <region id="rB5" left="0%" top="0%" width="0%" height="0%" zIndex="0"/>
 	      <region id="rB6" left="3%" top="70%" width="94%" height="10%" zIndex="7"/>
-	      <region id="rT1" left="6%" top="4%" width="94%" height="40%" zIndex="7"/> 
+	      <region id="rT1" left="6%" top="2%" width="70%" height="15%" zIndex="7"/> 
       </region>
       <region id="rrightColMenu" left="83.5%" top="0" width="16.5%" height="100%" zIndex="7">
             <region id="rgOpcao1" left="3%" top="20%" width="94%" height="10%"/>
@@ -29,36 +29,58 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
             <region id="rgOpcao5" left="3%" top="80%" width="94%" height="10%"/>
       </region>
       <region id="rNewScreen" width="100%" height="100%">
-      		<region id="rVideo2"  width="40%" height="40%" left="0%" top="0%" zIndex ="0" />
-      		<region id="rText4"  left="60%" height="40%"  top="60%" width="19%" zIndex ="0"/>
+      		<region id="rVideo2"  width="55%" height="55%" left="0%" top="0%" zIndex ="0" />
+      		<region id="rTV" left="60%" top="60%" width="40%" height="40%" zIndex="0"/>
+      		<!--<region id="rText4"  left="60%" height="40%"  top="60%" width="19%" zIndex ="0"/>-->
       		<region id="rBackMainMenu" left="3%" top="80%" width="15%" height="15%" zIndex="0"/>
+      		<region id="rQRCode" left="25%" top="60%" width="20%" height="35%" zIndex="0"/>
+      		<region id="rText4" left="60%" width="40%" height="55%" zIndex="0"/>
+      		<region id="rMainMenuBTN" left="3%" top="63%" width="30%" height="40%"> 
+		      	<region id="rBTN1" top="1%" left="1%" width="25%" height="30%"/>
+		      	<region id="rBTN2" top="1%" left="30%" width="25%" height="30%"/>
+		      	<region id="rBTN3" top="40%" left="1%" width="25%" height="30%"/>
+		      	<region id="rBTN4" top="40%" left="30%" width="25%" height="30%"/>
+ 	        </region>
       </region>
-      	
     </region>
   </regionBase>
 
   <descriptorBase>
+  	
   	<descriptor id="dNewScreen" region="rNewScreen"/>
   	<descriptor id="dBackMainMenu" region="rBackMainMenu" focusIndex="ixBtnBackMainMenu" />
+  	<descriptor id="dQRCode" region="rQRCode"/>
   	<descriptor id="dVideo" region="rVideo"/>
   	<descriptor id="dText1" region="rText1"/> 
   	<descriptor id="dText2" region="rText2"/> 
   	<descriptor id="dText3" region="rText3"/>
   	<descriptor id="dVideo2" region="rVideo2"/>
   	<descriptor id="dText4" region="rText4"/>   	
-    <descriptor id="dLateralBar" 	region="rMainMenu"/>
+    <descriptor id="dLateralBar" 	region="rMainMenu">
+    	<descriptorParam name="transparency" value="1"/>
+    </descriptor>
+    
+    <!--Descritores dos botões que aparecem na segunda tela-->
+    <descriptor id="dMainMenuBTN" region="rMainMenuBTN">
+    	<descriptorParam name="background" value="red"/>
+    </descriptor>
+    	
+    <descriptor id="dBTN1" region="rBTN1" focusIndex="ixBTN1" focusBorderWidth="0"	moveUp="ixBTN3" moveDown="ixBTN3" moveRight="ixBTN2" moveLeft="ixBTN2" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
+    <descriptor id="dBTN2" region="rBTN2" focusIndex="ixBTN2" focusBorderWidth="0"	moveUp="ixBTN4" moveDown="ixBTN4" moveRight="ixBTN1" moveLeft="ixBTN1" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
+    <descriptor id="dBTN3" region="rBTN3" focusIndex="ixBTN3" focusBorderWidth="0"	moveUp="ixBTN1" moveDown="ixBTN1" moveRight="ixBTN4" moveLeft="ixBTN4" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
+    <descriptor id="dBTN4" region="rBTN4" focusIndex="ixBTN4" focusBorderWidth="0"	moveUp="ixBTN2" moveDown="ixBTN2" moveRight="ixBTN3" moveLeft="ixBTN3" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
+    
 	<descriptor id="dBtStartMenu" 	region="rB4"/>
 	<descriptor id="dBtStopApp" 	region="rB5"/>
     <descriptor id="dBtDisease" 	region="rB1" focusIndex="ixBtDisease" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtCondition" moveRight="1" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
     <descriptor id="dBtCondition" 	region="rB2" focusIndex="ixBtCondition" focusBorderWidth="0" moveUp="ixBtDisease" moveDown="ixBtService" moveRight="1" focusSrc="img/btnconditionfocus.png" focusSelSrc="img/btnconditionselect.png"/>
     <descriptor id="dBtService" 	region="rB3" focusIndex="ixBtService" focusBorderWidth="0"	moveUp="ixBtCondition" moveDown="ixBtNewScreen" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnserviceselect.png"/>
    <descriptor id="dBtNewScreen" 	region="rB6" focusIndex="ixBtNewScreen" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtDisease" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnserviceselect.png"/>
-    <descriptor id="dT1" region="rT1" focusIndex="ixT1" moveRight="ixB4">
-		<descriptorParam name="background" value="black"/>
-        <descriptorParam name="fontSize" value="28"/>
-    </descriptor>
+    <descriptor id="dT1" region="rT1"/>
     
-	<descriptor id="dFundoMenu" region="rrightColMenu" />
+	<descriptor id="dFundoMenu" region="rrightColMenu">
+	<descriptorParam name="transparency" value="1"/>
+    </descriptor>
  	<descriptor id="dOpcao11" region="rgOpcao1" focusIndex="1" moveDown="2" moveUp="5" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
     <descriptor id="dOpcao12" region="rgOpcao2" focusIndex="2" moveDown="3" moveUp="1" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
     <descriptor id="dOpcao13" region="rgOpcao3" focusIndex="3" moveDown="4" moveUp="2" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
@@ -135,8 +157,18 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   	<area id="a2" begin="5s"/>
   </media>
   
+  <!--Media dos botões que aparecem no segundo menu-->
+  <!--<media descriptor="dMainMenuBTN" id="MainMenuBTN"/>-->
+  <media descriptor="dBTN1" id="BTN1" src="img/btndisease.png"/>
+  <media descriptor="dBTN2" id="BTN2" src="img/btncondition.png"/>
+  <media descriptor="dBTN3" id="BTN3" src="img/btnservice.png"/>
+  <media descriptor="dBTN4" id="BTN4" src="img/btnOthersIniciatives.png"/>
+  
   <media descriptor="dVideo2" id="video2" src="media/corrego1.mp4"/> 
   <media descriptor="dBackMainMenu" id="BackMainMenu" src="img/btndiabetes.png"/>
+  <media descriptor="dQRCode" id="QRCodeDesafio" src="img/QR_doce_desafio.png"/>
+  <media descriptor="dQRCode" id="QRCodeServiceDiabetes" src="img/QR_service_diabetes.png"/>
+  <media descriptor="dQRCode" id="QRCodeDiabetes" src="img/QRdiabetes.png"/>
   <media descriptor="dText4" id="Text4" src="txt/text2.txt"/>
   <media descriptor="dLateralBar" id="menulateralbar" src="img/patternmenubar.png"/>
   <media descriptor="dBtStopApp" id="btnstopapp" src="img/startmenu.png"/>
@@ -145,7 +177,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   <media descriptor="dBtCondition" id="btncondition" src="img/btncondition.png"/>
   <media descriptor="dBtService" id="btnservice" src="img/btnservice.png"/>
   <media descriptor="dBtNewScreen" id="btNewScreen" src="img/btndisease.png"/>
-  <media descriptor="dT1" id="t1" src="txt/text1.txt">
+  <media descriptor="dT1" id="t1" src="img/healthcare.png">
     <property name="fontUri"/>
     <property name="fontColor"/>
     <property name="fontSize"/>
@@ -355,8 +387,13 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     <bind component="cMenu3" role="stop"/>
     <bind component="video" role="stop"/>
     <bind component="video2" role="start"/>
-    <bind component="BackMainMenu" role="start"/>
+    <!--<bind component="BackMainMenu" role="start"/>-->
     <bind component="Text4" role="start"/>
+    <bind component="QRCodeDiabetes" role="start"/>
+    <bind component="BTN1" role="start"/>
+    <bind component="BTN2" role="start"/>
+    <bind component="BTN3" role="start"/>		
+    <bind component="BTN4" role="start"/>
   </link>
   
   <link id="linkSelectBackMainMenu" xconnector="onSelectionStartStop">
