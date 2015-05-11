@@ -40,7 +40,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
       </region> 
       <region id="rBoxes" left="25%" top="0%" width="50%" height="100%">
 		<region id="rBoxPrograms" right="0%" top="2%" width="60%" height="40%"/>
-		<region id="rBoxSymptoms" right="0%" top="2%" width="60%" height="40%"/>      	
+		<region id="rBoxSymptoms" right="0%" top="2%" width="60%" height="40%"/>    	
       </region>      	  
       <region id="rNewScreen" width="100%" height="100%">
       		<region id="rVideo2"  width="55%" height="55%" left="0%" top="0%" zIndex ="0" /> <!--Região do vídeo principal da nova tela-->
@@ -85,10 +85,14 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     <descriptor id="dBTN4" region="rBTN4" focusIndex="ixBTN4" focusBorderWidth="0"	moveUp="ixBTN2" moveDown="ixBTN2" moveRight="ixBTN3" moveLeft="ixBTN3" focusSrc="img/btnOtherIniciativesFocus.png" focusSelSrc="img/btndiseaseselect.png"/>
     
     <!--Descritores dos botões da subseção do menu 2-->
-    <descriptor id="dSubsectionOpt1" region="rSubsectionOpt1" focusIndex="ixSubsectionOpt1" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt7" moveDown="ixSubsectionOpt2" focusSrc="img/btnProgransFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
+    <descriptor id="dSubsectionOpt1" region="rSubsectionOpt1" focusIndex="ixSubsectionOpt1" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt8" moveDown="ixSubsectionOpt2" focusSrc="img/btnProgransFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
     <descriptor id="dSubsectionOpt2" region="rSubsectionOpt2" focusIndex="ixSubsectionOpt2" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt1" moveDown="ixSubsectionOpt3" focusSrc="img/btnSymptomsFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
     <descriptor id="dSubsectionOpt3" region="rSubsectionOpt3" focusIndex="ixSubsectionOpt3" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt2" moveDown="ixSubsectionOpt4" focusSrc="img/btnDiabeticNeuroFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
     <descriptor id="dSubsectionOpt4" region="rSubsectionOpt4" focusIndex="ixSubsectionOpt4" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt3" moveDown="ixSubsectionOpt5" focusSrc="img/btnFreePubMedFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
+    <descriptor id="dSubsectionOpt5" region="rSubsectionOpt5" focusIndex="ixSubsectionOpt5" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt4" moveDown="ixSubsectionOpt6" focusSrc="img/btnChildrenHemoFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
+    <descriptor id="dSubsectionOpt6" region="rSubsectionOpt6" focusIndex="ixSubsectionOpt6" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt5" moveDown="ixSubsectionOpt7" focusSrc="img/btnGestacionalDiabetesFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
+    <descriptor id="dSubsectionOpt7" region="rSubsectionOpt7" focusIndex="ixSubsectionOpt7" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt6" moveDown="ixSubsectionOpt8" focusSrc="img/btnGovernmentBeneFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
+    <descriptor id="dSubsectionOpt8" region="rSubsectionOpt8" focusIndex="ixSubsectionOpt8" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt7" moveDown="ixSubsectionOpt1" focusSrc="img/btnOtherIniciativesFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
     
     <!--Descritores das caixas com as descrições referentes a subseção-->
     <descriptor id="dBoxPrograms" region="rBoxPrograms"/>
@@ -227,8 +231,12 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 	  <media descriptor="dSubsectionOpt2" id="SubsectionOpt2" src="img/btnSymptoms.png"/>
 	  <media descriptor="dSubsectionOpt3" id="SubsectionOpt3" src="img/btnDiabeticNeuro.png"/>
 	  <media descriptor="dSubsectionOpt4" id="SubsectionOpt4" src="img/btnFreePubMed.png"/>
+	  <media descriptor="dSubsectionOpt5" id="SubsectionOpt5" src="img/btnChildrenHemo.png"/>
+	  <media descriptor="dSubsectionOpt6" id="SubsectionOpt6" src="img/btnGestacionalDiabetes.png"/>
+	  <media descriptor="dSubsectionOpt7" id="SubsectionOpt7" src="img/btnGovernmentBene.png"/>
+	  <media descriptor="dSubsectionOpt8" id="SubsectionOpt8" src="img/btnOtherIniciatives.png"/>
 	  
-	  <media descriptor="dBoxPrograms" id="BoxPrograms" src="img/BOX_programs.png"/>
+	  <media descriptor="dBoxPrograms" id="BoxPrograms" src="img/BOX_programs.png"/>btnOtherIniciatives
 	  
 	<link id="ShowSubsection11" xconnector="onSelectionStart">
   		<bind component="opcao11" role="onSelection"/>
@@ -236,6 +244,10 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   		<bind component="SubsectionOpt2" role="start"/>
   		<bind component="SubsectionOpt3" role="start"/>
   		<bind component="SubsectionOpt4" role="start"/>
+  		<bind component="SubsectionOpt5" role="start"/>
+  		<bind component="SubsectionOpt6" role="start"/>
+  		<bind component="SubsectionOpt7" role="start"/>
+  		<bind component="SubsectionOpt8" role="start"/>
   	</link>
   	
   	<link id="ShowText11" xconnector="onSelectionStart">
