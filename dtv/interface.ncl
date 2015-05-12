@@ -37,11 +37,25 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
       	<region id="rSubsectionOpt6" right="0%" top="54%" width="40%" height="10%" zIndex ="7"/>
       	<region id="rSubsectionOpt7" right="0%" top="64%" width="40%" height="10%" zIndex ="7"/>
       	<region id="rSubsectionOpt8" right="0%" top="74%" width="40%" height="10%" zIndex ="7"/>
+      	<region id="rSubsectionOpt9" right="0%" top="84%" width="40%" height="10%" zIndex ="7"/>
       </region> 
+      
       <region id="rBoxes" left="25%" top="0%" width="50%" height="100%">
+		<region id="rBoxSymptoms" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxFreeMed" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxGovBene" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxGestDiab" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxHemo" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxChildHemo" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxDiabNeur" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxPrograms" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>
+		<region id="rBoxOtherIni" right="0%" top="2%" width="60%" height="40%" zIndex ="10"/>    	
+      </region>
+     <!-- <region id="rBoxes" left="25%" top="0%" width="50%" height="100%">
 		<region id="rBoxPrograms" right="0%" top="2%" width="60%" height="40%"/>
 		<region id="rBoxSymptoms" right="0%" top="2%" width="60%" height="40%"/>    	
-      </region>      	  
+      </region>  
+         --> 	  
       <region id="rNewScreen" width="100%" height="100%">
       		<region id="rVideo2"  width="55%" height="55%" left="0%" top="0%" zIndex ="0" /> <!--Região do vídeo principal da nova tela-->
       		<region id="rTV" left="60%" top="60%" width="40%" height="40%" zIndex="0"/> <!--Região que aparece o conteúdo da TV na nova tela-->
@@ -85,33 +99,42 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     <descriptor id="dBTN4" region="rBTN4" focusIndex="ixBTN4" focusBorderWidth="0"	moveUp="ixBTN2" moveDown="ixBTN2" moveRight="ixBTN3" moveLeft="ixBTN3" focusSrc="img/btnOtherIniciativesFocus.png" focusSelSrc="img/btndiseaseselect.png"/>
     
     <!--Descritores dos botões da subseção do menu 2-->
-    <descriptor id="dSubsectionOpt1" region="rSubsectionOpt1" focusIndex="ixSubsectionOpt1" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt8" moveDown="ixSubsectionOpt2" focusSrc="img/btnProgransFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
-    <descriptor id="dSubsectionOpt2" region="rSubsectionOpt2" focusIndex="ixSubsectionOpt2" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt1" moveDown="ixSubsectionOpt3" focusSrc="img/btnSymptomsFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
-    <descriptor id="dSubsectionOpt3" region="rSubsectionOpt3" focusIndex="ixSubsectionOpt3" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt2" moveDown="ixSubsectionOpt4" focusSrc="img/btnDiabeticNeuroFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
-    <descriptor id="dSubsectionOpt4" region="rSubsectionOpt4" focusIndex="ixSubsectionOpt4" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt3" moveDown="ixSubsectionOpt5" focusSrc="img/btnFreePubMedFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
-    <descriptor id="dSubsectionOpt5" region="rSubsectionOpt5" focusIndex="ixSubsectionOpt5" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt4" moveDown="ixSubsectionOpt6" focusSrc="img/btnChildrenHemoFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
-    <descriptor id="dSubsectionOpt6" region="rSubsectionOpt6" focusIndex="ixSubsectionOpt6" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt5" moveDown="ixSubsectionOpt7" focusSrc="img/btnGestacionalDiabetesFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
-    <descriptor id="dSubsectionOpt7" region="rSubsectionOpt7" focusIndex="ixSubsectionOpt7" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt6" moveDown="ixSubsectionOpt8" focusSrc="img/btnGovernmentBeneFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
-    <descriptor id="dSubsectionOpt8" region="rSubsectionOpt8" focusIndex="ixSubsectionOpt8" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt7" moveDown="ixSubsectionOpt1" focusSrc="img/btnOtherIniciativesFocus.png" focusSelSrc="img/btndiseasefocus.png"/>
+    <descriptor id="dSubsectionOpt1" region="rSubsectionOpt1" focusIndex="ixSubsectionOpt1" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt9" moveDown="ixSubsectionOpt2" focusSrc="img/btnProgransFocus.png" focusSelSrc="img/btnPrograms.png"/>
+    <descriptor id="dSubsectionOpt2" region="rSubsectionOpt2" focusIndex="ixSubsectionOpt2" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt1" moveDown="ixSubsectionOpt3" focusSrc="img/btnSymptomsFocus.png" focusSelSrc="img/btnSymptoms.png"/>
+    <descriptor id="dSubsectionOpt3" region="rSubsectionOpt3" focusIndex="ixSubsectionOpt3" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt2" moveDown="ixSubsectionOpt4" focusSrc="img/btnDiabeticNeuroFocus.png" focusSelSrc="img/btnDiabeticNeuro.png"/>
+    <descriptor id="dSubsectionOpt4" region="rSubsectionOpt4" focusIndex="ixSubsectionOpt4" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt3" moveDown="ixSubsectionOpt5" focusSrc="img/btnFreePubMedFocus.png" focusSelSrc="img/btnFreePubMed.png"/>
+    <descriptor id="dSubsectionOpt5" region="rSubsectionOpt5" focusIndex="ixSubsectionOpt5" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt4" moveDown="ixSubsectionOpt6" focusSrc="img/btnHemoFocus.png" focusSelSrc="img/btnHemo.png"/>
+    <descriptor id="dSubsectionOpt6" region="rSubsectionOpt6" focusIndex="ixSubsectionOpt6" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt5" moveDown="ixSubsectionOpt7" focusSrc="img/btnChildrenHemoFocus.png" focusSelSrc="img/btnChildrenHemo.png"/>
+    <descriptor id="dSubsectionOpt7" region="rSubsectionOpt7" focusIndex="ixSubsectionOpt7" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt6" moveDown="ixSubsectionOpt8" focusSrc="img/btnGestacionalDiabetesFocus.png" focusSelSrc="img/btnGestacionalDiabetes.png"/>
+    <descriptor id="dSubsectionOpt8" region="rSubsectionOpt8" focusIndex="ixSubsectionOpt8" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt7" moveDown="ixSubsectionOpt9" focusSrc="img/btnGovernmentBeneFocus.png" focusSelSrc="img/btnGovernmentBene.png"/>
+    <descriptor id="dSubsectionOpt9" region="rSubsectionOpt9" focusIndex="ixSubsectionOpt9" focusBorderWidth="0" moveRight="1" moveUp="ixSubsectionOpt8" moveDown="ixSubsectionOpt1" focusSrc="img/btnOtherIniciativesFocus.png" focusSelSrc="img/btnOtherIniciatives.png"/>
     
     <!--Descritores das caixas com as descrições referentes a subseção-->
-    <descriptor id="dBoxPrograms" region="rBoxPrograms"/>
+    <descriptor id="dBoxSymptoms" region="rBoxSymptoms"/>
+   	<descriptor id="dBoxFreeMed" region="rBoxFreeMed"/>
+   	<descriptor id="dBoxGovBene" region="rBoxGovBene"/>
+   	<descriptor id="dBoxGestDiab" region="rBoxGestDiab"/>
+   	<descriptor id="dBoxHemo" region="rBoxHemo"/>
+   	<descriptor id="dBoxChildHemo" region="rBoxChildHemo"/>
+   	<descriptor id="dBoxDiabNeur" region="rBoxDiabNeur"/>
+   	<descriptor id="dBoxPrograms" region="rBoxPrograms"/>
+   	<descriptor id="dBoxOtherIni" region="rBoxOtherIni"/>
     
     <!--Descritores dos botões do menu principal com 3 opções-->
 	<descriptor id="dBtStartMenu" 	region="rB4"/>
 	<descriptor id="dBtStopApp" 	region="rB5"/>
-    <descriptor id="dBtDisease" 	region="rB1" focusIndex="ixBtDisease" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtCondition" moveRight="1" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
-    <descriptor id="dBtCondition" 	region="rB2" focusIndex="ixBtCondition" focusBorderWidth="0" moveUp="ixBtDisease" moveDown="ixBtService" moveRight="1" focusSrc="img/btnconditionfocus.png" focusSelSrc="img/btnconditionselect.png"/>
-    <descriptor id="dBtService" 	region="rB3" focusIndex="ixBtService" focusBorderWidth="0"	moveUp="ixBtCondition" moveDown="ixBtNewScreen" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnserviceselect.png"/>
-   <descriptor id="dBtNewScreen" 	region="rB6" focusIndex="ixBtNewScreen" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtDisease" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnserviceselect.png"/>
+    <descriptor id="dBtDisease" 	region="rB1" focusIndex="ixBtDisease" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtCondition" moveRight="1" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndisease.png"/>
+    <descriptor id="dBtCondition" 	region="rB2" focusIndex="ixBtCondition" focusBorderWidth="0" moveUp="ixBtDisease" moveDown="ixBtService" moveRight="1" focusSrc="img/btnconditionfocus.png" focusSelSrc="img/btncondition.png"/>
+    <descriptor id="dBtService" 	region="rB3" focusIndex="ixBtService" focusBorderWidth="0"	moveUp="ixBtCondition" moveDown="ixBtNewScreen" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnservice.png"/>
+   <descriptor id="dBtNewScreen" 	region="rB6" focusIndex="ixBtNewScreen" focusBorderWidth="0"	moveUp="ixBtService" moveDown="ixBtDisease" moveRight="1" focusSrc="img/btnservicefocus.png" focusSelSrc="img/btnservice.png"/>
     <descriptor id="dT1" region="rT1"/>
     
     <!--Descritores dos botões do menu esquerdo com 5 opções-->
 	<descriptor id="dFundoMenu" region="rrightColMenu">
 	<descriptorParam name="transparency" value="1"/>
     </descriptor>
- 	<descriptor id="dOpcao11" region="rgOpcao1" focusIndex="1" moveDown="2" moveUp="5" moveLeft="ixSubsectionOpt1" focusBorderWidth="0" focusSrc="img/btnDiabetesFocus.png" focusSelSrc="img/btndiseaseselect.png"/>
-    <descriptor id="dOpcao12" region="rgOpcao2" focusIndex="2" moveDown="3" moveUp="1" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btnHypertensionFocus.png" focusSelSrc="img/btndiseaseselect.png"/>
+ 	<descriptor id="dOpcao11" region="rgOpcao1" focusIndex="1" moveDown="2" moveUp="5" moveLeft="ixSubsectionOpt1" focusBorderWidth="0" focusSrc="img/btnDiabetesFocus.png" focusSelSrc="img/btnDiabetes.png"/>
+    <descriptor id="dOpcao12" region="rgOpcao2" focusIndex="2" moveDown="3" moveUp="1" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btnHypertensionFocus.png" focusSelSrc="img/btnHypertension.png"/>
     <descriptor id="dOpcao13" region="rgOpcao3" focusIndex="3" moveDown="4" moveUp="2" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
     <descriptor id="dOpcao14" region="rgOpcao4" focusIndex="4" moveDown="5" moveUp="3" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/> 
     <descriptor id="dOpcao15" region="rgOpcao5" focusIndex="5" moveDown="1" moveUp="4" moveLeft="ixBtDisease" focusBorderWidth="0" focusSrc="img/btndiseasefocus.png" focusSelSrc="img/btndiseaseselect.png"/>
@@ -216,9 +239,9 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 	   <port id="pMenu10" component="fundoMenu1"/>
 	   <port id="pMenu11" component="opcao11"/>
 	   <port id="pMenu12" component="opcao12"/>
-	   <port id="pMenu13" component="opcao13"/>
-	   <port id="pMenu14" component="opcao14"/>
-	   <port id="pMenu15" component="opcao15"/>
+	  <!-- <port id="pMenu13" component="opcao13"/> -->
+	  <!-- <port id="pMenu14" component="opcao14"/> -->
+	  <!-- <port id="pMenu15" component="opcao15"/> -->
 	  <media type="image/png" id="fundoMenu1" src= "img/patternmenubar.png" descriptor="dFundoMenu"/>
 	  <media id="opcao11" src="img/btnDiabetes.png" descriptor="dOpcao11"/>
 	  <media id="opcao12" src="img/btnHypertension.png" descriptor="dOpcao12"/>
@@ -231,12 +254,22 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
 	  <media descriptor="dSubsectionOpt2" id="SubsectionOpt2" src="img/btnSymptoms.png"/>
 	  <media descriptor="dSubsectionOpt3" id="SubsectionOpt3" src="img/btnDiabeticNeuro.png"/>
 	  <media descriptor="dSubsectionOpt4" id="SubsectionOpt4" src="img/btnFreePubMed.png"/>
-	  <media descriptor="dSubsectionOpt5" id="SubsectionOpt5" src="img/btnChildrenHemo.png"/>
-	  <media descriptor="dSubsectionOpt6" id="SubsectionOpt6" src="img/btnGestacionalDiabetes.png"/>
-	  <media descriptor="dSubsectionOpt7" id="SubsectionOpt7" src="img/btnGovernmentBene.png"/>
-	  <media descriptor="dSubsectionOpt8" id="SubsectionOpt8" src="img/btnOtherIniciatives.png"/>
+	  <media descriptor="dSubsectionOpt5" id="SubsectionOpt5" src="img/btnHemo.png"/>
+	  <media descriptor="dSubsectionOpt6" id="SubsectionOpt6" src="img/btnChildrenHemo.png"/>
+	  <media descriptor="dSubsectionOpt7" id="SubsectionOpt7" src="img/btnGestacionalDiabetes.png"/>
+	  <media descriptor="dSubsectionOpt8" id="SubsectionOpt8" src="img/btnGovernmentBene.png"/>
+	  <media descriptor="dSubsectionOpt9" id="SubsectionOpt9" src="img/btnOtherIniciatives.png"/>
 	  
-	  <media descriptor="dBoxPrograms" id="BoxPrograms" src="img/BOX_programs.png"/>btnOtherIniciatives
+	  <!--<media descriptor="dBoxPrograms" id="BoxPrograms" src="img/BOX_programs.png"/>-->
+	  <media descriptor="dBoxSymptoms" id="BoxSymptoms" src="img/BOX_symptoms.png"/>
+	  <media descriptor="dBoxFreeMed" id="BoxFreeMed" src="img/Free_public_medicine_03.png"/>
+	  <media descriptor="dBoxGovBene" id="BoxGovBene" src="img/BOX_Government_benefits_03.png"/>
+	  <media descriptor="dBoxGestDiab" id="BoxGestDiab" src="img/BOX_gestational_diabetes_03.png"/>
+	  <media descriptor="dBoxHemo" id="BoxHemo" src="img/Hemodialysis_03.png"/>
+	  <media descriptor="dBoxChildHemo" id="BoxChildHemo" src="img/BOX_children_hemodialysis_06.png"/>
+	  <media descriptor="dBoxDiabNeur" id="BoxDiabNeur" src="img/BOX_diabetic_neuropathies_06.png"/>
+	  <media descriptor="dBoxPrograms" id="BoxPrograms" src="img/BOX_programs.png"/>
+	  <media descriptor="dBoxOtherIni" id="BoxOtherIni" src="img/BOX_other_iniciaties_03.png"/>
 	  
 	<link id="ShowSubsection11" xconnector="onSelectionStart">
   		<bind component="opcao11" role="onSelection"/>
@@ -248,33 +281,125 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
   		<bind component="SubsectionOpt6" role="start"/>
   		<bind component="SubsectionOpt7" role="start"/>
   		<bind component="SubsectionOpt8" role="start"/>
+  		<bind component="SubsectionOpt9" role="start"/>
   	</link>
   	
-  	<link id="ShowText11" xconnector="onSelectionStart">
+  	<link id="ShowText11" xconnector="onSelectionStartStop">
 	  	<bind component="SubsectionOpt1" role="onSelection"/>
-	  	<bind component="BoxPrograms" role="start"/>
+	  	<bind component="BoxSymptoms" role="start"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
 	</link>
-  		
+
+  	<link id="ShowText12" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt2" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="start"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
+	</link>  		
   	
-  	<link id="ShowSubsection12" xconnector="onSelectionStart">
-  		<bind component="opcao12" role="onSelection"/>
-  		<bind component="Text" role="start"/>
-  	</link>
+  	<link id="ShowText13" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt3" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="start"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
+	</link>
+  	  	
+  	<link id="ShowText14" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt4" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="start"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
+	</link>
+	
+  	<link id="ShowText15" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt5" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="start"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
+	</link>
   	
-  	<link id="ShowSubsection13" xconnector="onSelectionStart">
-  		<bind component="opcao13" role="onSelection"/>
-  		<bind component="Text" role="start"/>
-  	</link>
+  	<link id="ShowText16" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt6" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="start"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
+	</link>
   	
-  	<link id="ShowSubsection14" xconnector="onSelectionStart">
-  		<bind component="opcao14" role="onSelection"/>
-  		<bind component="Text" role="start"/>
-  	</link>
+  	<link id="ShowText17" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt7" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="start"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
+	</link>
   	
-  	<link id="ShowSubsection15" xconnector="onSelectionStart">
-  		<bind component="opcao15" role="onSelection"/>
-  		<bind component="Text" role="start"/>
-  	</link>
+  	<link id="ShowText18" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt8" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="start"/>
+	  	<bind component="BoxOtherIni" role="stop"/>
+	</link>
+  	
+  	<link id="ShowText19" xconnector="onSelectionStartStop">
+	  	<bind component="SubsectionOpt9" role="onSelection"/>
+	  	<bind component="BoxSymptoms" role="stop"/>
+	  	<bind component="BoxFreeMed" role="stop"/>
+	  	<bind component="BoxGovBene" role="stop"/>
+	  	<bind component="BoxGestDiab" role="stop"/>
+	  	<bind component="BoxHemo" role="stop"/>
+	  	<bind component="BoxChildHemo" role="stop"/>
+	  	<bind component="BoxDiabNeur" role="stop"/>
+	  	<bind component="BoxPrograms" role="stop"/>
+	  	<bind component="BoxOtherIni" role="start"/>
+	</link>
   	
   </context>
 
@@ -380,7 +505,7 @@ http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
     <bind component="btncondition" role="start"/>
     <bind component="btnservice" role="start"/>
     <bind component="btnstopapp" role="start"/>
-    <bind component="btNewScreen" role="start"/>
+    <!-- <bind component="btNewScreen" role="start"/> -->
     <bind component="t1" role="start"/>
   </link>
 
